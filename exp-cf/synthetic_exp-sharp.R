@@ -1,5 +1,5 @@
 ##################################################################
-##             Sharp Sensitivity Analysis of counterfactuals                
+##    Conformalized Sharp Sensitivity Analysis of counterfactuals                
 ##################################################################
 
 # setwd("~/Conformal-sensitivity-analysis")
