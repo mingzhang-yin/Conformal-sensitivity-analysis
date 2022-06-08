@@ -26,7 +26,7 @@ cd ./bash
 bash run_XXX.sh
 ```
 * The python script in each example folder can be used to generate the plots in the paper
-* Each example folder has a directory `./out` that contains current numerical results 
+* Each example folder has a directory `./out` that contains our numerical results 
 * The fish consumption and blood mercury data is from R package [bootsens](https://github.com/qingyuanzhao/bootsens). The data is also contained in `./exp-fish/data`
 
 
