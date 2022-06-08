@@ -15,7 +15,7 @@ devtools::load_all(".")
 ## Directories
 
 * The Conformal Sensitivity Analysis (CSA) algorithm is implemented by the R scripts in the folder `./R`
-* The Conformalized Sharp Sensitivity Analysis (CSSA) algorithm is in synthetic_exp-sharp.R
+* The Conformalized Sharp Sensitivity Analysis (CSSA) algorithm is in `./exp-cf/synthetic_exp-sharp.R`
 * The folders `./exp-cf`, `./exp-ite`, `./exp-fish` are the example folders that contain the executable scripts for the simulations in the paper
 
 ## Code scripts, results and data
