@@ -1,6 +1,6 @@
 # Conformal Sensitivity Analysis 
 
-Implemention of conformal sensitivity analysis (CSA) described in [Conformal Sensitivity Analysis for Individual Treatment Effects](https://arxiv.org/pdf/2112.03493.pdf) by Mingzhang Yin, Claudia Shi, Yixin Wang and David Blei
+Implemention of conformal sensitivity analysis (CSA) and conformalized sharp sensitivity analysis (CSSA) described in [Conformal Sensitivity Analysis for Individual Treatment Effects](https://arxiv.org/pdf/2112.03493.pdf) by Mingzhang Yin, Claudia Shi, Yixin Wang and David Blei
 
 ## This repository
 
