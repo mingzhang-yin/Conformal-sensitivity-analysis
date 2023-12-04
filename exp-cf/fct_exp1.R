@@ -24,7 +24,7 @@ parser$add_argument("--dtype", type = "character", default = 'hete', help = 'dat
 parser$add_argument("--cftype", type = "integer", default = 2, help = 'confounding type {1,2,3}')
 
 parser$add_argument("--seed", type = "double", default = 1, help = "random seed")
-parser$add_argument("--ntrial", type = "integer", default = 50, help = "number of trials")
+parser$add_argument("--ntrial", type = "integer", default = 5, help = "number of trials")
 parser$add_argument("--path", type = "character", default = './exp1/')
 parser$add_argument("--fct", type = "double", default = 1, help = 'shrink factor of band')
 
@@ -141,7 +141,7 @@ for (trial in 1:ntrial){
     fcts <- seq(1, 0.5, by=-0.01)
     for(fct in fcts){
       ci <-shrink(set, fc=fct)
-      out <-  cfcausal::summary_CI(Ytest,Ytest_cf,ci,alpha)
+      out <-  summary_CI(Ytest,Ytest_cf,ci)
       coverage <- out$cr
         if(coverage < 0.8){
           record <- fct + 0.01
@@ -152,12 +152,12 @@ for (trial in 1:ntrial){
 
   fct_mean <- get_fct(ci_mean, Ytest, Ytest_cf)
   ci_mean <- shrink(ci_mean, fct_mean)
-  out_mean <- cfcausal::summary_CI(Ytest,Ytest_cf,ci_mean)
+  out_mean <- summary_CI(Ytest,Ytest_cf,ci_mean)
   print("now it's the cqr")
 
   fct_cqr <- get_fct(ci_cqr, Ytest,Ytest_cf)
   ci_cqr <- shrink(ci_cqr, fct_cqr)
-  out_cqr <- cfcausal::summary_CI(Ytest,Ytest_cf,ci_cqr)
+  out_cqr <- summary_CI(Ytest,Ytest_cf,ci_cqr)
 
   print(paste(min(out_mean$cr),out_mean$len, fct_mean))
   print(paste(min(out_cqr$cr),out_cqr$len,fct_cqr))
